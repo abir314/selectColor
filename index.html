@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <label for="chooseFarge">Velg farge:</label>
+    <select name="chooseFarge" id="farge" onchange="changeColor(this.value)">
+        
+        <option selected value="">none</option>
+        <optgroup label="Mørkt farge">
+        <option value="black">Black</option>
+        <option value="darkblue">Dark Blue</option>
+        </optgroup>
+        <optgroup label="Lys farge">
+        <option value="lightgreen">Light Green</option>
+        <option value="lightgray">Light Gray</option>
+        <option value="lightcoral">Light Coral</option>
+        </optgroup>
+
+    </select>
+    
+    <div id="infoDiv" style="width: 300px; height: 100px; display: flex; justify-content: center; margin: 50px;"><h2>Abir</h2></div>
+
+    <script>
+        
+        function changeColor(a) {
+            
+            
+            document.getElementById('infoDiv').style.backgroundColor = a;
+           
+            if (a == "black" || a == "darkblue") {
+                document.getElementById('infoDiv').style.color = "white";
+            }
+            else {document.getElementById('infoDiv').style.color = "black";}
+        }
+        
+
+    </script>
+</body>
+</html>
